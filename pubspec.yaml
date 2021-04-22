@@ -1,0 +1,55 @@
+name: moj_mali_dnevnik
+description: A small app for writing your thoughts and ideas.
+
+publish_to: 'none'
+
+version: 1.0.0+2
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  dough: ^1.0.1
+  flutter_screenutil: ^5.0.0
+  flutter_staggered_grid_view: ^0.4.0
+  flutter_svg: ^0.22.0
+  get: ^4.1.4
+  path_provider: ^2.0.1
+  sqflite: ^2.0.0+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.9.0
+  flutter_native_splash: ^1.1.7+1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'assets/icon.png'
+  adaptive_icon_background: '#FEF9F3'
+  adaptive_icon_foreground: 'assets/icon.png'
+
+flutter_native_splash:
+  android: true
+  ios: true
+  color: '#FEF9F3'
+  image: 'assets/icon.png'
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/illustrations/
+
+  fonts:
+    - family: BreeSerif
+      fonts:
+        - asset: assets/fonts/BreeSerif/BreeSerif-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+          weight: 500

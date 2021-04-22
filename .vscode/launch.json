@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Moj mali dnevnik Debug",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+        },
+        {
+            "name": "Moj mali dnevnik Release",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+        },
+    ]
+}
