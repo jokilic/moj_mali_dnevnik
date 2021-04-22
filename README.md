@@ -7,11 +7,11 @@
 ### Local database
 
 Notes are stored in a local database.\
-Everything is on your phone, no internet connection necessary.\
+Everything is on your phone, no internet connection necessary.
 
 ### Colors
 
-Notes can be aggregated using various colors.\
+Notes can be aggregated using various colors.
 
 ### Update
 
