@@ -5,7 +5,7 @@ class Assets {
   /// FONTS
   /// --------------------
 
-  final breeSerifFont = 'BreeSerif';
+  final butlerFont = 'Butler';
   final poppinsFont = 'Poppins';
 
   /// --------------------

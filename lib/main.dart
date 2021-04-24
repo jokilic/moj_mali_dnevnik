@@ -16,7 +16,7 @@ class MojMaliDnevnik extends StatelessWidget {
           defaultTransition: Transition.fade,
           title: Constants.assets.appName,
           theme: ThemeData(
-            fontFamily: Constants.assets.breeSerifFont,
+            fontFamily: Constants.assets.butlerFont,
           ),
           initialRoute: HomeScreen.id,
           getPages: pages,

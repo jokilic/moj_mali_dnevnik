@@ -47,10 +47,11 @@ flutter:
     - assets/illustrations/
 
   fonts:
-    - family: BreeSerif
-      fonts:
-        - asset: assets/fonts/BreeSerif/BreeSerif-Regular.ttf
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins/Poppins-Medium.ttf
-          weight: 500
+          weight: 600
+    - family: Butler
+      fonts:
+        - asset: assets/fonts/Butler/Butler-Medium.otf
+          weight: 600
