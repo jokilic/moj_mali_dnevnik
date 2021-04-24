@@ -54,23 +54,25 @@ class HomeScreen extends StatelessWidget {
 
             /// Delete chosen notes button
             Obx(
-              () {
-                if (_databaseController.chosenNotes.isNotEmpty) {
-                  return Padding(
-                    padding: EdgeInsets.only(bottom: 40.h),
-                    child: Align(
-                      alignment: Alignment.bottomLeft,
-                      child: RoundedButtonWidget(
-                        onTap: _databaseController.deleteChosenNotes,
-                        backgroundColor: Constants.colors.red,
-                        icon: Icons.delete,
-                        smallIcon: true,
-                      ),
+              () => AnimatedOpacity(
+                duration: const Duration(milliseconds: 200),
+                curve: Curves.easeIn,
+                opacity: _databaseController.chosenNotes.isNotEmpty ? 1 : 0,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 40.h),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: RoundedButtonWidget(
+                      onTap: _databaseController.chosenNotes.isNotEmpty
+                          ? _databaseController.deleteChosenNotes
+                          : () {},
+                      backgroundColor: Constants.colors.red,
+                      icon: Icons.delete,
+                      smallIcon: true,
                     ),
-                  );
-                }
-                return const SizedBox();
-              },
+                  ),
+                ),
+              ),
             ),
 
             /// Add note button

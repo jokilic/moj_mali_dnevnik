@@ -30,7 +30,7 @@ class EditNoteWidget extends StatelessWidget {
             maxLines: 2,
             inputFormatters: [LengthLimitingTextInputFormatter(36)],
             decoration: InputDecoration.collapsed(
-              hintText: 'Title',
+              hintText: Constants.strings.createNoteHintTitle,
               hintStyle: Constants.textStyles.createNoteHintTitle,
             ),
           ),
@@ -38,16 +38,19 @@ class EditNoteWidget extends StatelessWidget {
           SizedBox(height: 16.h),
 
           /// Content field
-          TextField(
-            controller: _noteController.contentController,
-            keyboardType: TextInputType.multiline,
-            style: Constants.textStyles.createNoteContent,
-            cursorWidth: 4,
-            cursorColor: Constants.colors.black,
-            maxLines: 8,
-            decoration: InputDecoration.collapsed(
-              hintText: 'Type something...',
-              hintStyle: Constants.textStyles.createNoteHintContent,
+          SizedBox(
+            height: 200.h,
+            child: TextField(
+              controller: _noteController.contentController,
+              keyboardType: TextInputType.multiline,
+              style: Constants.textStyles.createNoteContent,
+              cursorWidth: 4,
+              cursorColor: Constants.colors.black,
+              maxLines: null,
+              decoration: InputDecoration.collapsed(
+                hintText: Constants.strings.createNoteHintContent,
+                hintStyle: Constants.textStyles.createNoteHintContent,
+              ),
             ),
           ),
 

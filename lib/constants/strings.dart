@@ -16,6 +16,6 @@ class Strings {
   /// NOTE SCREEN
   /// --------------------
 
-  final createNoteTitle = 'Napiši novu bilješku';
-  final editNoteTitle = 'Uredi bilješku';
+  final createNoteHintTitle = 'Naslov';
+  final createNoteHintContent = 'Napiši nešto...';
 }

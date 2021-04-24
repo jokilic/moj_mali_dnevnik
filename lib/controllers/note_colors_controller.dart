@@ -35,29 +35,24 @@ class NoteColorsController extends GetxController {
       index: 4,
     ),
     NoteColor(
-      name: 'Weirdly yellow',
-      color: Constants.colors.yellow,
-      index: 5,
-    ),
-    NoteColor(
       name: 'Taxi yellow',
       color: Constants.colors.yellowNote,
-      index: 6,
+      index: 5,
     ),
     NoteColor(
       name: 'Ecologically green',
       color: Constants.colors.greenNote,
-      index: 7,
+      index: 6,
     ),
     NoteColor(
       name: 'Very green',
       color: Constants.colors.green,
-      index: 8,
+      index: 7,
     ),
     NoteColor(
       name: 'Too black',
       color: Constants.colors.black,
-      index: 9,
+      index: 8,
     ),
   ].obs;
   final Rx<NoteColor> _chosenColor = NoteColor(

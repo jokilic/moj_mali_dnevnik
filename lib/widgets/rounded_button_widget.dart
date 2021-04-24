@@ -46,7 +46,9 @@ class RoundedButtonWidget extends StatelessWidget {
               Positioned(
                 right: 2.w,
                 bottom: 0.h,
-                child: Container(
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  curve: Curves.easeIn,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: backgroundColor,
