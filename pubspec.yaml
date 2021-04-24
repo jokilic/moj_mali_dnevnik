@@ -30,13 +30,14 @@ flutter_icons:
   android: true
   ios: true
   image_path: 'assets/icon.png'
-  adaptive_icon_background: '#FEF9F3'
+  adaptive_icon_background: '#88A0BC'
   adaptive_icon_foreground: 'assets/icon.png'
+  remove_alpha_ios: true
 
 flutter_native_splash:
   android: true
   ios: true
-  color: '#FEF9F3'
+  color: '#88A0BC'
   image: 'assets/icon.png'
 
 flutter:
