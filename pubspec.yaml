@@ -3,7 +3,7 @@ description: A small app for writing your thoughts and ideas.
 
 publish_to: 'none'
 
-version: 1.0.1+3
+version: 1.0.2+4
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
