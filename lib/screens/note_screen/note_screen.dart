@@ -50,13 +50,19 @@ class NoteScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 64.h),
               child: Align(
                 alignment: Alignment.topRight,
-                child: RoundedButtonWidget(
-                  onTap: () async {
-                    await _noteController.saveNote();
-                    Get.back();
-                  },
-                  backgroundColor: Constants.colors.green,
-                  icon: Icons.check,
+                child: Obx(
+                  () => RoundedButtonWidget(
+                    onTap: _noteController.titleNotEmpty
+                        ? () async {
+                            await _noteController.saveNote();
+                            Get.back();
+                          }
+                        : () {},
+                    backgroundColor: _noteController.titleNotEmpty
+                        ? Constants.colors.green
+                        : Constants.colors.grey,
+                    icon: Icons.check,
+                  ),
                 ),
               ),
             ),

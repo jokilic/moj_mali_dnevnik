@@ -12,6 +12,7 @@ class Colors {
   final red = const Color(0xFFFA7A6D);
   final brown = const Color(0xFF6B3302);
   final green = const Color(0xFF95A479);
+  final blue = const Color(0xFF88A0BC);
 
   /// --------------------
   /// NOTES

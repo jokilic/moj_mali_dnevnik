@@ -14,46 +14,47 @@ class EditNoteWidget extends StatelessWidget {
     final _illustrationController = Get.find<IllustrationController>();
 
     return Padding(
-      padding: EdgeInsets.only(top: 120.h),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            /// Title field
-            TextField(
-              controller: _noteController.titleController,
-              textInputAction: TextInputAction.next,
-              style: Constants.textStyles.createNoteTitle,
-              cursorWidth: 4,
-              cursorColor: Constants.colors.black,
-              maxLines: 2,
-              inputFormatters: [LengthLimitingTextInputFormatter(36)],
-              decoration: InputDecoration.collapsed(
-                hintText: 'Title',
-                hintStyle: Constants.textStyles.createNoteHintTitle,
-              ),
+      padding: EdgeInsets.only(top: 180.h),
+      child: Column(
+        children: [
+          /// Title field
+          TextField(
+            onChanged: (value) => value.isNotEmpty
+                ? _noteController.titleNotEmpty = true
+                : _noteController.titleNotEmpty = false,
+            controller: _noteController.titleController,
+            textInputAction: TextInputAction.next,
+            style: Constants.textStyles.createNoteTitle,
+            cursorWidth: 4,
+            cursorColor: Constants.colors.black,
+            maxLines: 2,
+            inputFormatters: [LengthLimitingTextInputFormatter(36)],
+            decoration: InputDecoration.collapsed(
+              hintText: 'Title',
+              hintStyle: Constants.textStyles.createNoteHintTitle,
             ),
+          ),
 
-            SizedBox(height: 16.h),
+          SizedBox(height: 16.h),
 
-            /// Content field
-            TextField(
-              controller: _noteController.contentController,
-              keyboardType: TextInputType.multiline,
-              style: Constants.textStyles.createNoteContent,
-              cursorWidth: 4,
-              cursorColor: Constants.colors.black,
-              maxLines: 8,
-              decoration: InputDecoration.collapsed(
-                hintText: 'Type something...',
-                hintStyle: Constants.textStyles.createNoteHintContent,
-              ),
+          /// Content field
+          TextField(
+            controller: _noteController.contentController,
+            keyboardType: TextInputType.multiline,
+            style: Constants.textStyles.createNoteContent,
+            cursorWidth: 4,
+            cursorColor: Constants.colors.black,
+            maxLines: 8,
+            decoration: InputDecoration.collapsed(
+              hintText: 'Type something...',
+              hintStyle: Constants.textStyles.createNoteHintContent,
             ),
+          ),
 
-            Image.asset(
-              _illustrationController.randomIllustration,
-            ),
-          ],
-        ),
+          Image.asset(
+            _illustrationController.randomIllustration,
+          ),
+        ],
       ),
     );
   }

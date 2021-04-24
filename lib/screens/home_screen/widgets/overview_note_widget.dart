@@ -42,7 +42,7 @@ class OverviewNoteWidget extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(
                 color: _databaseController.chosenNotes.contains(note)
-                    ? Colors.grey[800]!
+                    ? Constants.colors.black
                     : _noteColorsController.noteColors[note.color].color,
                 width: 6,
               ),

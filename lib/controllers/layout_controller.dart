@@ -11,6 +11,9 @@ class LayoutController extends GetxController {
     final notes = Get.find<DatabaseController>().notes;
     final note = notes[index];
 
+    if (note.content.isEmpty) {
+      return 1.5;
+    }
     if (note.content.length < 30) {
       return 2;
     }

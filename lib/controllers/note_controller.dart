@@ -10,6 +10,7 @@ class NoteController extends GetxController with StateMixin<Note> {
   /// VARIABLES
   /// ------------------------
 
+  final RxBool _titleNotEmpty = false.obs;
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _contentController = TextEditingController();
 
@@ -17,12 +18,15 @@ class NoteController extends GetxController with StateMixin<Note> {
   /// GETTERS
   /// ------------------------
 
+  bool get titleNotEmpty => _titleNotEmpty.value;
   TextEditingController get titleController => _titleController;
   TextEditingController get contentController => _contentController;
 
   /// ------------------------
   /// SETTERS
   /// ------------------------
+
+  set titleNotEmpty(bool value) => _titleNotEmpty.value = value;
 
   /// ------------------------
   /// METHODS
@@ -39,12 +43,14 @@ class NoteController extends GetxController with StateMixin<Note> {
   }
 
   void clearNoteValues() {
+    titleNotEmpty = false;
     titleController.clear();
     contentController.clear();
   }
 
   void setNoteValues(Note note) {
     final _noteColorsController = Get.find<NoteColorsController>();
+    titleNotEmpty = true;
     titleController.text = note.title;
     contentController.text = note.content;
     _noteColorsController.chosenColor =

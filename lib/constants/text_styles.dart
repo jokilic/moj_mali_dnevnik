@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'constants.dart';
 
@@ -9,7 +8,7 @@ class TextStyles {
   /// --------------------
 
   final title = TextStyle(
-    fontSize: 38.sp,
+    fontSize: 36,
     color: Constants.colors.black,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -21,7 +20,7 @@ class TextStyles {
   /// --------------------
 
   final notesTitle = TextStyle(
-    fontSize: 30.sp,
+    fontSize: 28,
     color: Constants.colors.white,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -29,7 +28,7 @@ class TextStyles {
   );
 
   final notesContent = TextStyle(
-    fontSize: 20.sp,
+    fontSize: 18,
     color: Constants.colors.white,
     fontFamily: Constants.assets.poppinsFont,
     fontWeight: FontWeight.w500,
@@ -41,7 +40,7 @@ class TextStyles {
   /// --------------------
 
   final noNotesTitle = TextStyle(
-    fontSize: 36.sp,
+    fontSize: 36,
     color: Constants.colors.black,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -49,7 +48,7 @@ class TextStyles {
   );
 
   final noNotesSubtitle = TextStyle(
-    fontSize: 22.sp,
+    fontSize: 22,
     color: Constants.colors.black,
     height: 1.2,
   );
@@ -59,7 +58,7 @@ class TextStyles {
   /// --------------------
 
   final errorTitle = TextStyle(
-    fontSize: 36.sp,
+    fontSize: 36,
     color: Constants.colors.black,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -67,7 +66,7 @@ class TextStyles {
   );
 
   final errorSubtitle = TextStyle(
-    fontSize: 16.sp,
+    fontSize: 16,
     color: Constants.colors.black,
     height: 1.2,
   );
@@ -77,7 +76,7 @@ class TextStyles {
   /// --------------------
 
   final loadingTitle = TextStyle(
-    fontSize: 36.sp,
+    fontSize: 36,
     color: Constants.colors.black,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -85,7 +84,7 @@ class TextStyles {
   );
 
   final loadingSubtitle = TextStyle(
-    fontSize: 16.sp,
+    fontSize: 16,
     color: Constants.colors.black,
     height: 1.2,
   );
@@ -95,7 +94,7 @@ class TextStyles {
   /// --------------------
 
   final createNoteTitle = TextStyle(
-    fontSize: 32.sp,
+    fontSize: 32,
     color: Constants.colors.black,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -103,7 +102,7 @@ class TextStyles {
   );
 
   final createNoteHintTitle = TextStyle(
-    fontSize: 32.sp,
+    fontSize: 32,
     color: Constants.colors.black.withOpacity(0.4),
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -111,14 +110,14 @@ class TextStyles {
   );
 
   final createNoteContent = TextStyle(
-    fontSize: 24.sp,
+    fontSize: 22,
     fontFamily: Constants.assets.poppinsFont,
     fontWeight: FontWeight.w500,
     color: Constants.colors.black,
   );
 
   final createNoteHintContent = TextStyle(
-    fontSize: 24.sp,
+    fontSize: 22,
     fontFamily: Constants.assets.poppinsFont,
     fontWeight: FontWeight.w500,
     color: Constants.colors.black.withOpacity(0.4),
