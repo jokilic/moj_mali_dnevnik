@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 import '../../../controllers/database_controller.dart';
 import '../../../controllers/illustration_controller.dart';
-import '../../../controllers/layout_controller.dart';
 import '../../../models/note.dart';
 import 'overview_note_widget.dart';
 
@@ -18,7 +17,6 @@ class OverviewNotesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final _databaseController = Get.find<DatabaseController>();
     final _illustrationController = Get.find<IllustrationController>();
-    final _layoutController = Get.put<LayoutController>(LayoutController());
 
     return Stack(
       alignment: Alignment.center,
@@ -35,8 +33,10 @@ class OverviewNotesWidget extends StatelessWidget {
           ),
         Padding(
           padding: EdgeInsets.only(top: 136.h),
-          child: StaggeredGridView.countBuilder(
-            crossAxisCount: 4,
+          child: MasonryGridView.count(
+            crossAxisCount: 2,
+            mainAxisSpacing: 24.r,
+            crossAxisSpacing: 24.r,
             itemCount: _databaseController.notes.length,
             itemBuilder: (context, index) {
               final note = _databaseController.notes[index];
@@ -46,12 +46,6 @@ class OverviewNotesWidget extends StatelessWidget {
                 index: index,
               );
             },
-            staggeredTileBuilder: (index) => StaggeredTile.count(
-              2,
-              _layoutController.calculateTileHeight(index),
-            ),
-            mainAxisSpacing: 24.r,
-            crossAxisSpacing: 24.r,
           ),
         ),
       ],

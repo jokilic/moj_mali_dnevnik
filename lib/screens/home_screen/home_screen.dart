@@ -19,11 +19,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _databaseController =
-        Get.put<DatabaseController>(DatabaseController());
-    final _noteController = Get.put<NoteController>(NoteController());
-    Get.put<NoteColorsController>(NoteColorsController());
-    Get.put<IllustrationController>(IllustrationController());
+    final _databaseController = Get.put(DatabaseController());
+    final _noteController = Get.put(NoteController());
+    Get
+      ..put(NoteColorsController())
+      ..put(IllustrationController());
 
     return Scaffold(
       backgroundColor: Constants.colors.white,
@@ -63,12 +63,9 @@ class HomeScreen extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomLeft,
                     child: RoundedButtonWidget(
-                      onTap: _databaseController.chosenNotes.isNotEmpty
-                          ? _databaseController.deleteChosenNotes
-                          : () {},
+                      onTap: _databaseController.chosenNotes.isNotEmpty ? _databaseController.deleteChosenNotes : () {},
                       backgroundColor: Constants.colors.red,
                       icon: Icons.delete,
-                      smallIcon: true,
                     ),
                   ),
                 ),

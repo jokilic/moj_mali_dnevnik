@@ -12,7 +12,7 @@ class MojMaliDnevnik extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ScreenUtilInit(
         designSize: const Size(414, 896),
-        builder: () => GetMaterialApp(
+        builder: (_, __) => GetMaterialApp(
           defaultTransition: Transition.fade,
           title: Constants.assets.appName,
           theme: ThemeData(

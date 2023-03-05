@@ -8,13 +8,11 @@ class RoundedButtonWidget extends StatelessWidget {
   final Function() onTap;
   final Color backgroundColor;
   final IconData icon;
-  final bool smallIcon;
 
   const RoundedButtonWidget({
     required this.onTap,
     required this.backgroundColor,
     required this.icon,
-    this.smallIcon = false,
   });
 
   @override
@@ -38,8 +36,8 @@ class RoundedButtonWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                height: 80.r,
-                width: 80.r,
+                height: 68.r,
+                width: 68.r,
               ),
 
               /// Offset container
@@ -53,8 +51,8 @@ class RoundedButtonWidget extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: backgroundColor,
                   ),
-                  height: 72.r,
-                  width: 72.r,
+                  height: 60.r,
+                  width: 60.r,
                 ),
               ),
 
@@ -66,15 +64,15 @@ class RoundedButtonWidget extends StatelessWidget {
                     color: Constants.colors.brown,
                   ),
                 ),
-                height: 80.r,
-                width: 80.r,
+                height: 68.r,
+                width: 68.r,
               ),
 
               /// Icon
               Icon(
                 icon,
                 color: Constants.colors.brown,
-                size: smallIcon ? 40.r : 48.r,
+                size: 40.r,
               ),
             ],
           ),
